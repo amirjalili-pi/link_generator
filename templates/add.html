@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Form{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8">
+
+                <h1>Generate Link</h1>
+
+                {{ wtf.quick_form(form, button_map={"submit": "primary"}) }}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

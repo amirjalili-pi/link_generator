@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Generate link{% endblock %}
+
+{% block content %}
+<div class="jumbotron" style="text-align: center">
+    <div class="container">
+        <h1 class="display-4">Generate Link</h1>
+        {% for category, message in get_flashed_messages(with_categories=True) %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+        <hr class="my-4">
+        <p>if you want to add link</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('add') }}" role="button">Create link</a>
+    </div>
+</div>
+
+{% endblock %}
